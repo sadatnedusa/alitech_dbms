@@ -531,7 +531,72 @@ It seems there was an issue generating the diagram. Let me guide you on how to c
 
 ---
 
-Here's a relational database diagram illustrating the relationships between the `Customers`, `Orders`, `Products`, and `OrderDetails` tables.
+A relational database diagram illustrating the relationships between the `Customers`, `Orders`, `Products`, and `OrderDetails` tables.
 
+The entities are **Customers**, **Orders**, **Products**, and **OrderDetails**.
+
+### **Table Structures and Relationships:**
+
+#### **1. Customers Table**
+- **Primary Key (PK):** CustomerID
+- **Columns:**
+  - CustomerID (Primary Key)
+  - CustomerName
+  - Email
+  - Phone
+  - Address
+
+#### **2. Orders Table**
+- **Primary Key (PK):** OrderID
+- **Foreign Key (FK):** CustomerID (references Customers table)
+- **Columns:**
+  - OrderID (Primary Key)
+  - CustomerID (Foreign Key)
+  - OrderDate
+  - ShippingAddress
+  - Status (e.g., Pending, Shipped, Delivered)
+
+#### **3. Products Table**
+- **Primary Key (PK):** ProductID
+- **Columns:**
+  - ProductID (Primary Key)
+  - ProductName
+  - Price
+  - StockQuantity
+  - Category
+
+#### **4. OrderDetails Table**
+- **Primary Key (Composite Key):** OrderID + ProductID
+- **Foreign Keys (FK):** 
+  - OrderID (references Orders table)
+  - ProductID (references Products table)
+- **Columns:**
+  - OrderID (Foreign Key, part of Composite Key)
+  - ProductID (Foreign Key, part of Composite Key)
+  - Quantity
+  - TotalPrice (calculated as `Quantity * Price`)
+
+
+
+### **Relationships:**
+1. **Customers ↔ Orders:**
+   - One-to-Many: A single customer can place multiple orders, but each order is linked to one customer.
+
+2. **Orders ↔ OrderDetails:**
+   - One-to-Many: Each order can have multiple line items (products), represented in the OrderDetails table.
+
+3. **Products ↔ OrderDetails:**
+   - One-to-Many: Each product can appear in multiple orders, represented in the OrderDetails table.
+
+
+
+### **Diagram Description:**
+- **Entities (Tables):** Represented as rectangles.
+- **Primary Keys:** Highlighted at the top of each entity.
+- **Foreign Keys:** Drawn as connections between entities.
+- **Relationships:**
+  - Labeled as "1" (one) or "∞" (many) to indicate the cardinality.
+
+![image](https://github.com/user-attachments/assets/dabcc84c-e12b-4120-be2f-1fe7a54ced2a)
 
 
