@@ -123,10 +123,8 @@ RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 
 ---
 
+Dive deeper into **advanced exercises** and detailed **explanations** for specific JOIN types.
 
-Let’s dive deeper into **advanced exercises** and detailed **explanations** for specific JOIN types.
-
----
 
 ### **Advanced Exercises**
 
@@ -191,8 +189,6 @@ JOIN Products ON OrderDetails.ProductID = Products.ProductID
 GROUP BY Customers.CustomerName;
 ```
 
----
-
 #### 2. **Self JOIN**
 Find pairs of customers in the same city.
 ```sql
@@ -205,8 +201,6 @@ FROM
 JOIN Customers B ON A.City = B.City AND A.CustomerID < B.CustomerID;
 ```
 
----
-
 #### 3. **Handling NULLs**
 Find all orders, ensuring `NULL` in `CustomerID` doesn’t exclude the row.
 ```sql
@@ -218,8 +212,6 @@ FROM
     Orders
 LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
 ```
-
----
 
 ### **Detailed Explanations**
 
@@ -235,8 +227,6 @@ INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 ```
 - **Result**: Rows where `CustomerID` exists in both `Customers` and `Orders`.
 
----
-
 #### **LEFT JOIN**
 - Returns all rows from the left table and matched rows from the right table. Unmatched rows show `NULL`.
 - Use case: Find all customers, even those without orders.
@@ -246,8 +236,6 @@ FROM Customers
 LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 ```
 
----
-
 #### **RIGHT JOIN**
 - Similar to LEFT JOIN, but starts with the right table.
 - Use case: Include all orders, even if the customer info is missing.
@@ -256,8 +244,6 @@ SELECT Customers.CustomerName, Orders.Amount
 FROM Customers
 RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 ```
-
----
 
 #### **FULL OUTER JOIN**
 - Combines LEFT JOIN and RIGHT JOIN.
@@ -272,9 +258,8 @@ FROM Customers
 RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 ```
 
----
 
-Let’s dive into **advanced JOIN exercises** and explanations. Here's how you can deepen your understanding:
+Dive into **advanced JOIN exercises** and explanations. Here's how you can deepen your understanding:
 
 ---
 
@@ -327,7 +312,6 @@ INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
 INNER JOIN Products ON OrderDetails.ProductID = Products.ProductID;
 ```
 
----
 
 ### **Exercise 2: Self JOIN**
 
@@ -342,8 +326,6 @@ FROM Customers A
 INNER JOIN Customers B ON A.City = B.City AND A.CustomerID != B.CustomerID;
 ```
 
----
-
 ### **Exercise 3: Aggregate Functions with JOIN**
 
 #### **Scenario**: Calculate the total amount spent by each customer.
@@ -357,7 +339,6 @@ INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
 GROUP BY Customers.CustomerName;
 ```
 
----
 
 ### **Exercise 4: JOIN with Conditions**
 
@@ -374,7 +355,7 @@ WHERE Orders.OrderDate BETWEEN '2024-11-01' AND '2024-11-30'
   AND Orders.Amount > 200;
 ```
 
----
+
 
 ### **Exercise 5: Handling NULLs in JOINs**
 
@@ -390,7 +371,6 @@ LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID
 WHERE Customers.CustomerID IS NULL;
 ```
 
----
 
 ### **Key Notes for Advanced Learning**
 1. **Optimize with Indexes**:
@@ -408,7 +388,6 @@ WHERE Customers.CustomerID IS NULL;
 3. **Practice on Real Data**:
    - Use publicly available datasets like [Kaggle](https://www.kaggle.com/) or sample databases like `sakila`.
 
----
 
 ### **Relational Diagram of Tables**
 Below is the relational diagram for the tables we have created:
@@ -423,7 +402,6 @@ Below is the relational diagram for the tables we have created:
 - **Orders** ↔ **OrderDetails**: An `OrderID` in `OrderDetails` references `Orders`.
 - **Products** ↔ **OrderDetails**: A `ProductID` in `OrderDetails` references `Products`.
 
----
 
 ### **Visual Diagram Description**
 Imagine a diagram like this:
@@ -505,10 +483,6 @@ SELECT * FROM CustomerOrder WHERE TotalSpent > 500;
 
 ---
 
-It seems there was an issue generating the diagram. Let me guide you on how to create it manually or try again with refined input.
-
----
-
 ### **Steps to Create the Relational Diagram**
 
 1. **Use Online Tools**:
@@ -531,7 +505,7 @@ It seems there was an issue generating the diagram. Let me guide you on how to c
 
 ---
 
-A relational database diagram illustrating the relationships between the `Customers`, `Orders`, `Products`, and `OrderDetails` tables.
+Re-iterate relational database diagram illustrating the relationships between the `Customers`, `Orders`, `Products`, and `OrderDetails` tables.
 
 The entities are **Customers**, **Orders**, **Products**, and **OrderDetails**.
 
@@ -576,8 +550,6 @@ The entities are **Customers**, **Orders**, **Products**, and **OrderDetails**.
   - Quantity
   - TotalPrice (calculated as `Quantity * Price`)
 
-
-
 ### **Relationships:**
 1. **Customers ↔ Orders:**
    - One-to-Many: A single customer can place multiple orders, but each order is linked to one customer.
@@ -587,8 +559,6 @@ The entities are **Customers**, **Orders**, **Products**, and **OrderDetails**.
 
 3. **Products ↔ OrderDetails:**
    - One-to-Many: Each product can appear in multiple orders, represented in the OrderDetails table.
-
-
 
 ### **Diagram Description:**
 - **Entities (Tables):** Represented as rectangles.
