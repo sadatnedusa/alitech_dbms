@@ -7,7 +7,7 @@
 
 ---
 
-MySQL - Binary Tree - M - Way Search Tree - B Tree
+MySQL - Binary (B) Tree - M - Way Search 
 
 - 10.2 B Trees and B+ Trees. How they are useful in Databases
   - https://www.youtube.com/watch?v=aZjYr87r1b8
