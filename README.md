@@ -13,3 +13,7 @@ MySQL - Binary (B) Tree - M - Way Search
   - https://www.youtube.com/watch?v=aZjYr87r1b8
 - Understanding B-Trees: The Data Structure Behind Modern Databases
   - https://www.youtube.com/watch?v=K1a2Bk8NrYQ
+- Why do databases store data in B+ trees?
+  - https://www.youtube.com/watch?v=09E-tVAUqQw
+- Database Sharding and Partitioning
+  - https://www.youtube.com/watch?v=wXvljefXyEo
