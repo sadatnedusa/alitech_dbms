@@ -1,5 +1,11 @@
 The **InnoDB Buffer Pool** is a critical component of MySQL's InnoDB storage engine, designed to optimize database performance by reducing disk I/O operations. It acts as a memory cache for data and indexes, ensuring frequently accessed data remains in memory for quicker retrieval.
 
+References:
+ - https://dev.mysql.com/doc/refman/8.4/en/innodb-storage-engine.html
+ - https://dev.mysql.com/doc/refman/8.4/en/mysql-acid.html
+ - https://dev.mysql.com/doc/refman/8.4/en/innodb-architecture.html
+
+
 ### Key Features of the InnoDB Buffer Pool:
 
 1. **Caching Data and Indexes**:
